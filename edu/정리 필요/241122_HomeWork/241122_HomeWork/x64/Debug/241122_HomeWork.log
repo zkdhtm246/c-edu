@@ -1,0 +1,4 @@
+﻿  lobby.cpp
+  Shop.cpp
+  코드를 생성하고 있습니다...
+C:\Users\user\Desktop\241122_HomeWork\lobby.cpp(25,1): error C4700: 초기화되지 않은 's' 지역 변수를 사용했습니다.

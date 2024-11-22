@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\user\\Desktop\\day11\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{13944651-DA13-402F-895A-C0718F6C7B22}|day11.vcxproj|C:\\Users\\user\\Desktop\\day11\\STL.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{13944651-DA13-402F-895A-C0718F6C7B22}|day11.vcxproj|solutionrelative:STL.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13944651-DA13-402F-895A-C0718F6C7B22}|day11.vcxproj|C:\\Users\\user\\Desktop\\day11\\template.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{13944651-DA13-402F-895A-C0718F6C7B22}|day11.vcxproj|solutionrelative:template.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13944651-DA13-402F-895A-C0718F6C7B22}|day11.vcxproj|C:\\Users\\user\\Desktop\\day11\\operatorOverloading.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{13944651-DA13-402F-895A-C0718F6C7B22}|day11.vcxproj|solutionrelative:operatorOverloading.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13944651-DA13-402F-895A-C0718F6C7B22}|day11.vcxproj|C:\\Users\\user\\Desktop\\day11\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{13944651-DA13-402F-895A-C0718F6C7B22}|day11.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "STL.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\day11\\STL.cpp",
+              "RelativeDocumentMoniker": "STL.cpp",
+              "ToolTip": "C:\\Users\\user\\Desktop\\day11\\STL.cpp",
+              "RelativeToolTip": "STL.cpp",
+              "ViewState": "AgIAAKsAAAAAAAAAAAAQwMwAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-22T01:56:42.142Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "template.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\day11\\template.cpp",
+              "RelativeDocumentMoniker": "template.cpp",
+              "ToolTip": "C:\\Users\\user\\Desktop\\day11\\template.cpp",
+              "RelativeToolTip": "template.cpp",
+              "ViewState": "AgIAACcAAAAAAAAAAAApwGUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-22T01:26:31.886Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "operatorOverloading.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\day11\\operatorOverloading.cpp",
+              "RelativeDocumentMoniker": "operatorOverloading.cpp",
+              "ToolTip": "C:\\Users\\user\\Desktop\\day11\\operatorOverloading.cpp",
+              "RelativeToolTip": "operatorOverloading.cpp",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-22T00:44:47.767Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\day11\\main.cpp",
+              "RelativeDocumentMoniker": "main.cpp",
+              "ToolTip": "C:\\Users\\user\\Desktop\\day11\\main.cpp",
+              "RelativeToolTip": "main.cpp",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAACgAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-22T00:34:33.82Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

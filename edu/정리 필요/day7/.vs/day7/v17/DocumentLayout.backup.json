@@ -1,0 +1,139 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\user\\Desktop\\day7\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{22E6AB5E-2782-4E8C-BF8E-A939E6B27E68}|day7.vcxproj|C:\\Users\\user\\Desktop\\day7\\HomeWork02.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{22E6AB5E-2782-4E8C-BF8E-A939E6B27E68}|day7.vcxproj|solutionrelative:HomeWork02.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22E6AB5E-2782-4E8C-BF8E-A939E6B27E68}|day7.vcxproj|C:\\Users\\user\\Desktop\\day7\\HomeWork01.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{22E6AB5E-2782-4E8C-BF8E-A939E6B27E68}|day7.vcxproj|solutionrelative:HomeWork01.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22E6AB5E-2782-4E8C-BF8E-A939E6B27E68}|day7.vcxproj|C:\\Users\\user\\Desktop\\day7\\04.str.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{22E6AB5E-2782-4E8C-BF8E-A939E6B27E68}|day7.vcxproj|solutionrelative:04.str.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22E6AB5E-2782-4E8C-BF8E-A939E6B27E68}|day7.vcxproj|C:\\Users\\user\\Desktop\\day7\\TypeCasting.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{22E6AB5E-2782-4E8C-BF8E-A939E6B27E68}|day7.vcxproj|solutionrelative:TypeCasting.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22E6AB5E-2782-4E8C-BF8E-A939E6B27E68}|day7.vcxproj|C:\\Users\\user\\Desktop\\day7\\03.UserDataType.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{22E6AB5E-2782-4E8C-BF8E-A939E6B27E68}|day7.vcxproj|solutionrelative:03.UserDataType.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22E6AB5E-2782-4E8C-BF8E-A939E6B27E68}|day7.vcxproj|C:\\Users\\user\\Desktop\\day7\\02.UserDataType.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{22E6AB5E-2782-4E8C-BF8E-A939E6B27E68}|day7.vcxproj|solutionrelative:02.UserDataType.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22E6AB5E-2782-4E8C-BF8E-A939E6B27E68}|day7.vcxproj|C:\\Users\\user\\Desktop\\day7\\01.UserDataType.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{22E6AB5E-2782-4E8C-BF8E-A939E6B27E68}|day7.vcxproj|solutionrelative:01.UserDataType.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HomeWork02.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\day7\\HomeWork02.cpp",
+              "RelativeDocumentMoniker": "HomeWork02.cpp",
+              "ToolTip": "C:\\Users\\user\\Desktop\\day7\\HomeWork02.cpp",
+              "RelativeToolTip": "HomeWork02.cpp",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAABgAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-18T05:25:15.055Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HomeWork01.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\day7\\HomeWork01.cpp",
+              "RelativeDocumentMoniker": "HomeWork01.cpp",
+              "ToolTip": "C:\\Users\\user\\Desktop\\day7\\HomeWork01.cpp",
+              "RelativeToolTip": "HomeWork01.cpp",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAADkAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-18T04:41:28.017Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "04.str.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\day7\\04.str.cpp",
+              "RelativeDocumentMoniker": "04.str.cpp",
+              "ToolTip": "C:\\Users\\user\\Desktop\\day7\\04.str.cpp",
+              "RelativeToolTip": "04.str.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-18T03:01:41.604Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "03.UserDataType.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\day7\\03.UserDataType.cpp",
+              "RelativeDocumentMoniker": "03.UserDataType.cpp",
+              "ToolTip": "C:\\Users\\user\\Desktop\\day7\\03.UserDataType.cpp",
+              "RelativeToolTip": "03.UserDataType.cpp",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAkAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-18T02:45:49.67Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "02.UserDataType.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\day7\\02.UserDataType.cpp",
+              "RelativeDocumentMoniker": "02.UserDataType.cpp",
+              "ToolTip": "C:\\Users\\user\\Desktop\\day7\\02.UserDataType.cpp",
+              "RelativeToolTip": "02.UserDataType.cpp",
+              "ViewState": "AgIAADkAAAAAAAAAAAAAAFUAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-18T01:36:42.142Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "01.UserDataType.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\day7\\01.UserDataType.cpp",
+              "RelativeDocumentMoniker": "01.UserDataType.cpp",
+              "ToolTip": "C:\\Users\\user\\Desktop\\day7\\01.UserDataType.cpp",
+              "RelativeToolTip": "01.UserDataType.cpp",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAADMAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-18T00:53:47.438Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TypeCasting.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\day7\\TypeCasting.cpp",
+              "RelativeDocumentMoniker": "TypeCasting.cpp",
+              "ToolTip": "C:\\Users\\user\\Desktop\\day7\\TypeCasting.cpp",
+              "RelativeToolTip": "TypeCasting.cpp",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-18T00:31:49.722Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
