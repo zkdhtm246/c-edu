@@ -1,5 +1,6 @@
 #include "Shop.h"
 #include "player.h"
+#include "lobby.h"
 
 
 void Shop::ShopIn()

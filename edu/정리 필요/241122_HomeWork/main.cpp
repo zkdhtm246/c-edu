@@ -35,16 +35,16 @@
 int main() {
 	
 
-	Player* n = new Status("",0,0,0,0,0,0,0,0,0,"","","","","");
+	Player* p = new Status("",0,0,0,0,0,0,0,0,0,"","","","","");
 
-	Shop s;
-	Lobby l(n);
+	Shop shop;
+	Lobby lobby(p, &shop);
 
-	n->CreatePlayer();
-	n->PrintInfo();
-	l.Insert();
+	p->CreatePlayer();
+	p->PrintInfo();
+	lobby.Insert();
 
 
-	delete n;
+	delete p;
 }
 

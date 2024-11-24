@@ -1,5 +1,6 @@
 #pragma once
 #include"player.h"
+#include "Shop.h"
 
 class Lobby
 {
