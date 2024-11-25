@@ -1,34 +1,38 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\zkdht\\Documents\\GitHub\\c-edu\\edu\\\uC815\uB9AC \uD544\uC694\\241122_HomeWork\\",
+  "WorkspaceRootPath": "C:\\Users\\user\\Documents\\GitHub\\c-edu\\edu\\\uC815\uB9AC \uD544\uC694\\241122_HomeWork\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{19F92F18-3591-4693-BAA8-D10F43275D51}|241122_HomeWork.vcxproj|C:\\Users\\zkdht\\Documents\\GitHub\\c-edu\\edu\\\uC815\uB9AC \uD544\uC694\\241122_HomeWork\\lobby.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{19F92F18-3591-4693-BAA8-D10F43275D51}|241122_HomeWork.vcxproj|solutionrelative:lobby.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{19F92F18-3591-4693-BAA8-D10F43275D51}|241122_HomeWork.vcxproj|C:\\Users\\zkdht\\Documents\\GitHub\\c-edu\\edu\\\uC815\uB9AC \uD544\uC694\\241122_HomeWork\\Shop.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{19F92F18-3591-4693-BAA8-D10F43275D51}|241122_HomeWork.vcxproj|solutionrelative:Shop.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{19F92F18-3591-4693-BAA8-D10F43275D51}|241122_HomeWork.vcxproj|C:\\Users\\zkdht\\Documents\\GitHub\\c-edu\\edu\\\uC815\uB9AC \uD544\uC694\\241122_HomeWork\\Shop.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{19F92F18-3591-4693-BAA8-D10F43275D51}|241122_HomeWork.vcxproj|solutionrelative:Shop.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{19F92F18-3591-4693-BAA8-D10F43275D51}|241122_HomeWork.vcxproj|C:\\Users\\zkdht\\Documents\\GitHub\\c-edu\\edu\\\uC815\uB9AC \uD544\uC694\\241122_HomeWork\\lobby.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{19F92F18-3591-4693-BAA8-D10F43275D51}|241122_HomeWork.vcxproj|solutionrelative:lobby.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{19F92F18-3591-4693-BAA8-D10F43275D51}|241122_HomeWork.vcxproj|C:\\Users\\zkdht\\Documents\\GitHub\\c-edu\\edu\\\uC815\uB9AC \uD544\uC694\\241122_HomeWork\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{19F92F18-3591-4693-BAA8-D10F43275D51}|241122_HomeWork.vcxproj|C:\\Users\\user\\Documents\\GitHub\\c-edu\\edu\\\uC815\uB9AC \uD544\uC694\\241122_HomeWork\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{19F92F18-3591-4693-BAA8-D10F43275D51}|241122_HomeWork.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{19F92F18-3591-4693-BAA8-D10F43275D51}|241122_HomeWork.vcxproj|C:\\Users\\zkdht\\Documents\\GitHub\\c-edu\\edu\\\uC815\uB9AC \uD544\uC694\\241122_HomeWork\\player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{19F92F18-3591-4693-BAA8-D10F43275D51}|241122_HomeWork.vcxproj|C:\\Users\\user\\Documents\\GitHub\\c-edu\\edu\\\uC815\uB9AC \uD544\uC694\\241122_HomeWork\\Shop.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{19F92F18-3591-4693-BAA8-D10F43275D51}|241122_HomeWork.vcxproj|solutionrelative:Shop.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19F92F18-3591-4693-BAA8-D10F43275D51}|241122_HomeWork.vcxproj|C:\\Users\\user\\Documents\\GitHub\\c-edu\\edu\\\uC815\uB9AC \uD544\uC694\\241122_HomeWork\\lobby.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{19F92F18-3591-4693-BAA8-D10F43275D51}|241122_HomeWork.vcxproj|solutionrelative:lobby.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19F92F18-3591-4693-BAA8-D10F43275D51}|241122_HomeWork.vcxproj|C:\\Users\\user\\Documents\\GitHub\\c-edu\\edu\\\uC815\uB9AC \uD544\uC694\\241122_HomeWork\\lobby.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{19F92F18-3591-4693-BAA8-D10F43275D51}|241122_HomeWork.vcxproj|solutionrelative:lobby.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19F92F18-3591-4693-BAA8-D10F43275D51}|241122_HomeWork.vcxproj|C:\\Users\\user\\Documents\\GitHub\\c-edu\\edu\\\uC815\uB9AC \uD544\uC694\\241122_HomeWork\\Shop.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{19F92F18-3591-4693-BAA8-D10F43275D51}|241122_HomeWork.vcxproj|solutionrelative:Shop.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19F92F18-3591-4693-BAA8-D10F43275D51}|241122_HomeWork.vcxproj|C:\\Users\\user\\Documents\\GitHub\\c-edu\\edu\\\uC815\uB9AC \uD544\uC694\\241122_HomeWork\\player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{19F92F18-3591-4693-BAA8-D10F43275D51}|241122_HomeWork.vcxproj|solutionrelative:player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19F92F18-3591-4693-BAA8-D10F43275D51}|241122_HomeWork.vcxproj|C:\\Users\\user\\Documents\\GitHub\\c-edu\\edu\\\uC815\uB9AC \uD544\uC694\\241122_HomeWork\\player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{19F92F18-3591-4693-BAA8-D10F43275D51}|241122_HomeWork.vcxproj|solutionrelative:player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{19F92F18-3591-4693-BAA8-D10F43275D51}|241122_HomeWork.vcxproj|C:\\Users\\zkdht\\Documents\\GitHub\\c-edu\\edu\\\uC815\uB9AC \uD544\uC694\\241122_HomeWork\\player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{19F92F18-3591-4693-BAA8-D10F43275D51}|241122_HomeWork.vcxproj|solutionrelative:player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{19F92F18-3591-4693-BAA8-D10F43275D51}|241122_HomeWork.vcxproj|C:\\Users\\user\\Documents\\GitHub\\c-edu\\edu\\\uC815\uB9AC \uD544\uC694\\241122_HomeWork\\litem.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{19F92F18-3591-4693-BAA8-D10F43275D51}|241122_HomeWork.vcxproj|solutionrelative:litem.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,28 +42,40 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
+              "Title": "litem.h",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\c-edu\\edu\\\uC815\uB9AC \uD544\uC694\\241122_HomeWork\\litem.h",
+              "RelativeDocumentMoniker": "litem.h",
+              "ToolTip": "C:\\Users\\user\\Documents\\GitHub\\c-edu\\edu\\\uC815\uB9AC \uD544\uC694\\241122_HomeWork\\litem.h",
+              "RelativeToolTip": "litem.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-11-24T11:03:50.344Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Shop.cpp",
-              "DocumentMoniker": "C:\\Users\\zkdht\\Documents\\GitHub\\c-edu\\edu\\\uC815\uB9AC \uD544\uC694\\241122_HomeWork\\Shop.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\c-edu\\edu\\\uC815\uB9AC \uD544\uC694\\241122_HomeWork\\Shop.cpp",
               "RelativeDocumentMoniker": "Shop.cpp",
-              "ToolTip": "C:\\Users\\zkdht\\Documents\\GitHub\\c-edu\\edu\\\uC815\uB9AC \uD544\uC694\\241122_HomeWork\\Shop.cpp",
+              "ToolTip": "C:\\Users\\user\\Documents\\GitHub\\c-edu\\edu\\\uC815\uB9AC \uD544\uC694\\241122_HomeWork\\Shop.cpp",
               "RelativeToolTip": "Shop.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-11-24T10:35:34.965Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Shop.h",
-              "DocumentMoniker": "C:\\Users\\zkdht\\Documents\\GitHub\\c-edu\\edu\\\uC815\uB9AC \uD544\uC694\\241122_HomeWork\\Shop.h",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\c-edu\\edu\\\uC815\uB9AC \uD544\uC694\\241122_HomeWork\\Shop.h",
               "RelativeDocumentMoniker": "Shop.h",
-              "ToolTip": "C:\\Users\\zkdht\\Documents\\GitHub\\c-edu\\edu\\\uC815\uB9AC \uD544\uC694\\241122_HomeWork\\Shop.h",
+              "ToolTip": "C:\\Users\\user\\Documents\\GitHub\\c-edu\\edu\\\uC815\uB9AC \uD544\uC694\\241122_HomeWork\\Shop.h",
               "RelativeToolTip": "Shop.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
@@ -68,11 +84,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "player.cpp",
-              "DocumentMoniker": "C:\\Users\\zkdht\\Documents\\GitHub\\c-edu\\edu\\\uC815\uB9AC \uD544\uC694\\241122_HomeWork\\player.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\c-edu\\edu\\\uC815\uB9AC \uD544\uC694\\241122_HomeWork\\player.cpp",
               "RelativeDocumentMoniker": "player.cpp",
-              "ToolTip": "C:\\Users\\zkdht\\Documents\\GitHub\\c-edu\\edu\\\uC815\uB9AC \uD544\uC694\\241122_HomeWork\\player.cpp",
+              "ToolTip": "C:\\Users\\user\\Documents\\GitHub\\c-edu\\edu\\\uC815\uB9AC \uD544\uC694\\241122_HomeWork\\player.cpp",
               "RelativeToolTip": "player.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
@@ -81,24 +97,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "player.h",
-              "DocumentMoniker": "C:\\Users\\zkdht\\Documents\\GitHub\\c-edu\\edu\\\uC815\uB9AC \uD544\uC694\\241122_HomeWork\\player.h",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\c-edu\\edu\\\uC815\uB9AC \uD544\uC694\\241122_HomeWork\\player.h",
               "RelativeDocumentMoniker": "player.h",
-              "ToolTip": "C:\\Users\\zkdht\\Documents\\GitHub\\c-edu\\edu\\\uC815\uB9AC \uD544\uC694\\241122_HomeWork\\player.h",
+              "ToolTip": "C:\\Users\\user\\Documents\\GitHub\\c-edu\\edu\\\uC815\uB9AC \uD544\uC694\\241122_HomeWork\\player.h",
               "RelativeToolTip": "player.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-11-24T10:35:39.415Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "lobby.cpp",
-              "DocumentMoniker": "C:\\Users\\zkdht\\Documents\\GitHub\\c-edu\\edu\\\uC815\uB9AC \uD544\uC694\\241122_HomeWork\\lobby.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\c-edu\\edu\\\uC815\uB9AC \uD544\uC694\\241122_HomeWork\\lobby.cpp",
               "RelativeDocumentMoniker": "lobby.cpp",
-              "ToolTip": "C:\\Users\\zkdht\\Documents\\GitHub\\c-edu\\edu\\\uC815\uB9AC \uD544\uC694\\241122_HomeWork\\lobby.cpp",
+              "ToolTip": "C:\\Users\\user\\Documents\\GitHub\\c-edu\\edu\\\uC815\uB9AC \uD544\uC694\\241122_HomeWork\\lobby.cpp",
               "RelativeToolTip": "lobby.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
@@ -107,26 +123,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "lobby.h",
-              "DocumentMoniker": "C:\\Users\\zkdht\\Documents\\GitHub\\c-edu\\edu\\\uC815\uB9AC \uD544\uC694\\241122_HomeWork\\lobby.h",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\c-edu\\edu\\\uC815\uB9AC \uD544\uC694\\241122_HomeWork\\lobby.h",
               "RelativeDocumentMoniker": "lobby.h",
-              "ToolTip": "C:\\Users\\zkdht\\Documents\\GitHub\\c-edu\\edu\\\uC815\uB9AC \uD544\uC694\\241122_HomeWork\\lobby.h",
+              "ToolTip": "C:\\Users\\user\\Documents\\GitHub\\c-edu\\edu\\\uC815\uB9AC \uD544\uC694\\241122_HomeWork\\lobby.h",
               "RelativeToolTip": "lobby.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-11-24T10:35:38.685Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "main.cpp",
-              "DocumentMoniker": "C:\\Users\\zkdht\\Documents\\GitHub\\c-edu\\edu\\\uC815\uB9AC \uD544\uC694\\241122_HomeWork\\main.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\c-edu\\edu\\\uC815\uB9AC \uD544\uC694\\241122_HomeWork\\main.cpp",
               "RelativeDocumentMoniker": "main.cpp",
-              "ToolTip": "C:\\Users\\zkdht\\Documents\\GitHub\\c-edu\\edu\\\uC815\uB9AC \uD544\uC694\\241122_HomeWork\\main.cpp",
-              "RelativeToolTip": "main.cpp",
-              "ViewState": "AgIAAAoAAAAAAAAAAADgvywAAAAQAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\user\\Documents\\GitHub\\c-edu\\edu\\\uC815\uB9AC \uD544\uC694\\241122_HomeWork\\main.cpp*",
+              "RelativeToolTip": "main.cpp*",
+              "ViewState": "AgIAABkAAAAAAAAAAADgvycAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-11-24T10:35:07.628Z",
               "EditorCaption": ""
