@@ -1,0 +1,69 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\user\\Documents\\c-edu\\edu\\\uC815\uB9AC \uD544\uC694\\day13\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9AD979F9-16B3-4382-9135-59DD106E636B}|..\\MAP\\MAP.vcxproj|C:\\Users\\user\\Documents\\c-edu\\edu\\\uC815\uB9AC \uD544\uC694\\MAP\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECEB4B4C-34D2-4847-A7A6-CC87BE7E1B8D}|day13.vcxproj|C:\\Users\\user\\Documents\\c-edu\\edu\\\uC815\uB9AC \uD544\uC694\\day13\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{ECEB4B4C-34D2-4847-A7A6-CC87BE7E1B8D}|day13.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AD979F9-16B3-4382-9135-59DD106E636B}|..\\MAP\\MAP.vcxproj|C:\\Users\\user\\Documents\\c-edu\\edu\\\uC815\uB9AC \uD544\uC694\\MAP\\Scene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\c-edu\\edu\\\uC815\uB9AC \uD544\uC694\\day13\\main.cpp",
+              "RelativeDocumentMoniker": "main.cpp",
+              "ToolTip": "C:\\Users\\user\\Documents\\c-edu\\edu\\\uC815\uB9AC \uD544\uC694\\day13\\main.cpp",
+              "RelativeToolTip": "main.cpp",
+              "ViewState": "AgIAADAAAAAAAAAAAAAEwEQAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-26T05:35:32.411Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\c-edu\\edu\\\uC815\uB9AC \uD544\uC694\\MAP\\main.cpp",
+              "RelativeDocumentMoniker": "..\\MAP\\main.cpp",
+              "ToolTip": "C:\\Users\\user\\Documents\\c-edu\\edu\\\uC815\uB9AC \uD544\uC694\\MAP\\main.cpp",
+              "RelativeToolTip": "..\\MAP\\main.cpp",
+              "ViewState": "AgIAAGEAAAAAAAAAAAAAAHMAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-26T05:32:33.359Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Scene.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\c-edu\\edu\\\uC815\uB9AC \uD544\uC694\\MAP\\Scene.cpp",
+              "RelativeDocumentMoniker": "..\\MAP\\Scene.cpp",
+              "ToolTip": "C:\\Users\\user\\Documents\\c-edu\\edu\\\uC815\uB9AC \uD544\uC694\\MAP\\Scene.cpp",
+              "RelativeToolTip": "..\\MAP\\Scene.cpp",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAABAAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-26T05:28:52.29Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -106,12 +106,13 @@ int main() {
 
 	}
 }
+std::hash
 
 
 /*
 
 1. SOLID 원칙
-2. Map vs unoridered_mapy
+2. Map vs unordered_map
 - 다양하게 예제를 만들어보기
 3. 해시테이블
 4. 해시함수
