@@ -1,0 +1,12 @@
+﻿  Track.cpp
+Race.obj : error LNK2005: "void __cdecl BufferFlip(void)" (?BufferFlip@@YAXXZ)이(가) Track.obj에 이미 정의되어 있습니다.
+Race.obj : error LNK2005: "void __cdecl ClearScreen(void)" (?ClearScreen@@YAXXZ)이(가) Track.obj에 이미 정의되어 있습니다.
+Race.obj : error LNK2005: "void __cdecl DestroyGame(void)" (?DestroyGame@@YAXXZ)이(가) Track.obj에 이미 정의되어 있습니다.
+Race.obj : error LNK2005: "void __cdecl InitGame(bool)" (?InitGame@@YAX_N@Z)이(가) Track.obj에 이미 정의되어 있습니다.
+Race.obj : error LNK2005: "struct stConsole console" (?console@@3UstConsole@@A)이(가) Track.obj에 이미 정의되어 있습니다.
+main.obj : error LNK2005: "void __cdecl BufferFlip(void)" (?BufferFlip@@YAXXZ)이(가) Track.obj에 이미 정의되어 있습니다.
+main.obj : error LNK2005: "void __cdecl ClearScreen(void)" (?ClearScreen@@YAXXZ)이(가) Track.obj에 이미 정의되어 있습니다.
+main.obj : error LNK2005: "void __cdecl DestroyGame(void)" (?DestroyGame@@YAXXZ)이(가) Track.obj에 이미 정의되어 있습니다.
+main.obj : error LNK2005: "void __cdecl InitGame(bool)" (?InitGame@@YAX_N@Z)이(가) Track.obj에 이미 정의되어 있습니다.
+main.obj : error LNK2005: "struct stConsole console" (?console@@3UstConsole@@A)이(가) Track.obj에 이미 정의되어 있습니다.
+C:\Users\Sori\OneDrive\c-edu\edu\UMA\x64\Debug\UMA.exe : fatal error LNK1169: 여러 번 정의된 기호가 있습니다.

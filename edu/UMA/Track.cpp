@@ -1,5 +1,5 @@
 #include "Track.h"
-#include"Handle.h"
+
 #include"Character.h"
 #include"Race.h"
 #include<Windows.h>
@@ -22,7 +22,7 @@ void Track::TrackBuild()
             }
         }
     }
-    handle.CursorView();
+    //handle.CursorView();
 }
 
 void Track::TrackPrint(int playX, int playY, int cpuX, int cpuY)
@@ -39,21 +39,32 @@ void Track::TrackPrint(int playX, int playY, int cpuX, int cpuY)
     if (start_y < 0) start_y = 0;
     if (end_y > TRACK_HEIGHT) end_y = TRACK_HEIGHT;
     
-    system("cls");
+    ClearScreen();
+
+    COORD cursorPos = { 0,0 };
+    DWORD dwWritten;   
 
     for (int i = start_y; i < end_y; ++i)
-    {
+    {     
         for (int j = start_x; j < end_x; ++j)
         {
+            char ch = ' ';
             if (i == playY && j == playX && i == cpuY && j == cpuX)
-                std::cout << "X";  // 플레이어와 CPU가 같은 위치에 있으면 'X' 출력
+                ch = 'x';  // 플레이어와 CPU가 같은 위치에 있으면 'X' 출력
             if (i == playY && j == playX)
-                std::cout << "P";  // 플레이어 위치
+                ch = 'p';  // 플레이어 위치
             else if (i == cpuY && j == cpuX)
-                std::cout << "C";  // CPU 위치
+                ch = 'c';  // CPU 위치
             else
-                std::cout << track[i][j];  // 트랙 출력 (0, 1, 2 등)
+                ch = track[i][j];  // 트랙 출력 (0, 1, 2 등)
+
+            WriteConsoleOutputCharacter(console.hBuffer[console.nCurBuffer], &ch, 1, cursorPos, &dwWritten);
+
+            cursorPos.X++;
         }
-        std::cout << std::endl;
+        cursorPos.X = 0;
+        cursorPos.Y++;
     }
+    BufferFlip();
+    
 }

@@ -1,6 +1,7 @@
 #pragma once
 #include"Handle.h"
 #include"Race.h"
+#include"DoubleBuffring.h"
 
 #define TRACK_WIDTH 300  // 트랙의 가로 길이
 #define TRACK_HEIGHT 15   // 트랙의 세로 높이
