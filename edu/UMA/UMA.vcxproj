@@ -128,7 +128,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Character.cpp" />
+    <ClCompile Include="DoubleBuffring.cpp" />
     <ClCompile Include="Handle.cpp" />
+    <ClCompile Include="Lobby.cpp" />
     <ClCompile Include="Race.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClCompile>
@@ -143,6 +145,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="Handle.h" />
+    <ClInclude Include="Lobby.h" />
     <ClInclude Include="Race.h" />
     <ClInclude Include="Skill.h" />
     <ClInclude Include="Track.h" />

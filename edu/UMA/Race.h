@@ -1,17 +1,15 @@
 #pragma once
-#include<iostream>
-#include<vector>
-#include"Character.h"
-#include"Track.h"
+#include"Handle.h"
 
 class Track;
+class Character;
 
 class Race
 {
 private:
     int playX, playY;
     int cpuX, cpuY;
-    std::vector<Character*>& characterList;
+    std::vector<Character*>& RaceCharacterList;
     Track& track;
 
 public:

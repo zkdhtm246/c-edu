@@ -1,10 +1,5 @@
 #include "Track.h"
 
-#include"Character.h"
-#include"Race.h"
-#include<Windows.h>
-
-
 Track::Track()
 {
     TrackBuild();
@@ -21,13 +16,13 @@ void Track::TrackBuild()
                 track[i][j] = ' ';
             }
         }
-    }
-    //handle.CursorView();
+    }    
 }
 
 void Track::TrackPrint(int playX, int playY, int cpuX, int cpuY)
 {
-    
+    ClearScreen();
+
     int start_x = playX - PLAYER_FOCUS_WIDTH / 2;
     int end_x = playX + PLAYER_FOCUS_WIDTH / 2;
     int start_y = playY - PLAYER_FOCUS_HEIGHT / 2;
@@ -38,33 +33,36 @@ void Track::TrackPrint(int playX, int playY, int cpuX, int cpuY)
     if (end_x > TRACK_WIDTH) end_x = TRACK_WIDTH;
     if (start_y < 0) start_y = 0;
     if (end_y > TRACK_HEIGHT) end_y = TRACK_HEIGHT;
-    
-    ClearScreen();
 
-    COORD cursorPos = { 0,0 };
+    COORD cursorPos;
+    cursorPos.X = 0;
+    cursorPos.Y = 0;
     DWORD dwWritten;   
 
     for (int i = start_y; i < end_y; ++i)
-    {     
+    {
+        cursorPos.X = 0;
         for (int j = start_x; j < end_x; ++j)
         {
             char ch = ' ';
-            if (i == playY && j == playX && i == cpuY && j == cpuX)
+            if (i == playY && j == playX && i == cpuY && j == cpuX) {
                 ch = 'x';  // 플레이어와 CPU가 같은 위치에 있으면 'X' 출력
-            if (i == playY && j == playX)
+            }                
+            else if (i == playY && j == playX) {
                 ch = 'p';  // 플레이어 위치
-            else if (i == cpuY && j == cpuX)
+            }                
+            else if (i == cpuY && j == cpuX) {
                 ch = 'c';  // CPU 위치
-            else
+            }                
+            else {
                 ch = track[i][j];  // 트랙 출력 (0, 1, 2 등)
+            }               
 
             WriteConsoleOutputCharacter(console.hBuffer[console.nCurBuffer], &ch, 1, cursorPos, &dwWritten);
 
-            cursorPos.X++;
-        }
-        cursorPos.X = 0;
+            cursorPos.X++;           
+        }        
         cursorPos.Y++;
     }
-    BufferFlip();
-    
+    BufferFlip();    
 }
