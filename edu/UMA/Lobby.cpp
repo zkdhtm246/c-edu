@@ -1,31 +1,35 @@
 ﻿#include "Lobby.h"
 
+
 void gotoxy(int x, int y);
 
-void MeinMeun()
+void MeinMeun(Cash& batCash)
 {		
 	std::vector<Character*>characterList;
 	CreateCharacterList(characterList);
 
-	InitGame();
-
-	Track track;
-
 	while (1) {
+		ClearScreen();
 		TitleDraw();
  		int menuCode = MenuDraw();
+		
 		if (menuCode == 0) {
+			InitGame();
+			Track track;
 			//게임시작
-			int selectedCharacterIndex = CharacterChoice();
+			int selectedCharacterIndex = CharacterChoice(characterList);
+			int selectedBattingCash = Batting(characterList, selectedCharacterIndex, batCash);
 			
 			std::vector<Character*>raceCharacters;
 			raceCharacters.push_back(characterList[selectedCharacterIndex]);
 			raceCharacters.push_back(characterList[(selectedCharacterIndex + 1) % 3]);
 			
 			track.TrackBuild();
-			Race race(raceCharacters, track);			
-			race.RaceStart();
-			
+			Race race(raceCharacters, track, &batCash);
+			race.RaceStart(selectedBattingCash);
+
+			std::cout << "\n경기가 종료되었습니다. 메인 메뉴로 돌아갑니다.\n";
+			Sleep(2000);			
 		}
 		else if (menuCode == 1)	{
 			//게임설정
@@ -34,8 +38,7 @@ void MeinMeun()
 			//종료
 			DeleteCharacterList(characterList);
 			return;
-		}
-		
+		}		
 	}	
 }
 
@@ -90,8 +93,8 @@ int MenuDraw()
 	}
 }
 
-int CharacterChoice()
-{
+int CharacterChoice(const std::vector<Character*>& characterList)
+{	
 	int x = 3;
 	int y = 6;
 	system("cls");
@@ -105,10 +108,11 @@ int CharacterChoice()
 	printf(" [OGURI CAP ]"); //18
 
 	int characterIndex = 0;
-
+	characterList[characterIndex]->PrintLobbyInfo();
 	while (1) {
 		int n = KeyControl();
 		switch (n) {
+			
 		case RIGHT: {
 			if (characterIndex < 2) {
 				gotoxy(x, y);
@@ -116,6 +120,7 @@ int CharacterChoice()
 				gotoxy(x += 19, y);
 				printf(">");
 				characterIndex++;
+				characterList[characterIndex]->PrintLobbyInfo();
 			}
 			break;
 		}
@@ -126,6 +131,7 @@ int CharacterChoice()
 				gotoxy(x -= 19, y);
 				printf(">");
 				characterIndex--;
+				characterList[characterIndex]->PrintLobbyInfo();
 			}
 			break;
 		}
@@ -134,4 +140,52 @@ int CharacterChoice()
 		}
 		}
 	}
+}
+
+int Batting(const std::vector<Character*>& characterList, int index, Cash& batCash)
+{
+	system("cls");
+	int x = 3;
+	int y = 6;
+	
+	int inCash = batCash.GetCash();
+	int battingCash = 0;
+	printf("\n");
+	std::cout << "배팅 금액을 설정하세요 (500원 단위)\n" << std::endl;
+	std::cout << "                   소지금 : " << inCash << std::endl;
+	gotoxy(x, y);
+	std::cout << "      원" << std::endl;
+	gotoxy(x, y);
+	std::cout << battingCash << std::endl;
+
+	while (1) {
+		int n = KeyControl();
+		switch (n) {
+		case UP: {
+			if (battingCash < inCash) {
+				gotoxy(x, y);
+				std::cout << "      원" << std::endl;
+				gotoxy(x, y);
+				battingCash += 500;
+				std::cout << battingCash << std::endl;				
+			}
+			break;
+		}
+		case DOWN: {
+			if (battingCash >= 100) {
+				gotoxy(x, y);
+				std::cout << "      원" << std::endl;
+				gotoxy(x, y);
+				battingCash -= 500;
+				std::cout << battingCash << std::endl;				
+			}
+			break;
+		}
+		case SPACE: {
+			batCash.SetBattingCash(battingCash);
+			return battingCash;
+		}
+		}
+	}
+
 }

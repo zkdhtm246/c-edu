@@ -2,11 +2,13 @@
 
 int main()
 {
+    Cash batCash;
+
     system("mode con:cols=150 lines=50|title umapyoi");
     // 트랙 초기화
-    MeinMeun();  
+    MeinMeun(batCash);
 
-    DestroyGame();    
+    DestroyGame();
 
     return 0;
 }

@@ -1,25 +1,60 @@
 #pragma once
 #include"Handle.h"
 
+class Skill;
+
 class Character
 {
 private:
 	std::string name;
-	const int speed;
-	const int power;	
-	const int intel;
+	int speed;
+	int power;	
+	int intel;
+	int rank;
+
+	std::vector<Skill*>activeSkills;
+	std::vector<Skill*>passiveSkills;
 
 public:
-	Character(std::string n, const int s, const int p, const int i);		
+	Character(std::string n, int s, int p, int i);
+
 	
-	int GetStatusSpeed()const;
-	int GetStatusPower()const;
-	int GetStatusIntel()const;
-	std::string GetName()const;
+	void PrintLobbyInfo()const;
+		
+	void AddActiveSkill(Skill* skill);
+	void AddPassiveSkill(Skill* skill);
+	
+	void UseActiveSkills(int playX);
+	void UpdatePassiveSkills();
+
+	void SetRank(int newRank) { rank = newRank; }	
+
+	void UpSpeed(int value) { speed += value; }
+	void UpPower(int value) { power += value; }
+	void UpIntel(int value) { intel += value; }
+
+	int GetStatusSpeed()const { return speed; }
+	int GetStatusPower()const { return power; }
+	int GetStatusIntel()const { return intel; }
+	std::string GetName()const { return name; }
+	int GetRank()const { return rank; }
+	int GetplayX()const { return speed / 10; }
+
+	void DownSpeed(int value);
 };
 
 void CreateCharacterList(std::vector<Character*>& characterList);
 void DeleteCharacterList(std::vector<Character*>& characterList);
+
+class Cash {
+private:
+	int cash;
+public:
+	Cash();
+	int GetCash();
+	void SetBattingCash(int battingCash);
+	void SetWinCash(int battingCash, int rank);
+};
 
 
 

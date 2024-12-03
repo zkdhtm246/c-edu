@@ -3,11 +3,16 @@
 #include<iostream>
 #include<conio.h>
 #include<vector>
+#include<cstdlib>
+#include<ctime>
+#include<algorithm>
 #include"DoubleBuffring.h"
 #include"Race.h"
 #include"Track.h"
 #include"Character.h"
 #include"Lobby.h"
+#include"Skill.h"
+
 
 #define UP 72
 #define DOWN 80
@@ -17,3 +22,4 @@
 
 void gotoxy(int x, int y);
 int KeyControl();
+void SkillRandom();

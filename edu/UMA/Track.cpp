@@ -11,6 +11,9 @@ void Track::TrackBuild()
         for (int j = 0; j < TRACK_WIDTH; ++j) {
             if (i == 0 || i == TRACK_HEIGHT - 1) {
                 track[i][j] = '=';
+                if (j % 100 == 0) {
+                    track[i][j] = '/';
+                }
             }
             else {
                 track[i][j] = ' ';

@@ -30,3 +30,8 @@ int KeyControl()
 		return SPACE;
 	}		
 }
+
+void SkillRandom()
+{
+	std::srand(static_cast<unsigned>(std::time(0)));
+}
