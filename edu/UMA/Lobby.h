@@ -8,3 +8,4 @@ void TitleDraw();
 int MenuDraw();
 int CharacterChoice(const std::vector<Character*>& characterList);
 int Batting(const std::vector<Character*>& characterList, int index, Cash& batCash);
+int SkillChoice(Character& selectedCharacter);

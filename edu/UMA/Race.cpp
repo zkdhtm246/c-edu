@@ -1,34 +1,41 @@
 #include"Race.h"
 
 Race::Race(std::vector<Character*>& characters, Track& t, Cash* cash)
-    :RaceCharacterList(characters), track(t), playX(0), playY(7), cpuX(0), cpuY(8), batCash(cash) {}
+    :RaceCharacterList(characters), track(t), playX(0), playY(7), cpuX(0), cpuY(8), batCash(cash), charPose(0) {}
 
 void Race::RaceStart(int cash)
 {
     SkillRandom();
     int playX = 0, playY = 7;  // 플레이어의 초기 위치
     int cpuX = 0, cpuY = 8;    // CPU의 초기 위치
+    int time = 0;
+
     while (1)
-    {       
-        
-        // 플레이어 이동 처리
-        playX += RaceCharacterList[0]->GetStatusSpeed() / 10 + std::rand() & 2;
+    {
+        time++;
+                
 
-        // CPU 이동 처리 (장애물이 없는 곳에서만 이동)
-        cpuX += RaceCharacterList[1]->GetStatusSpeed() / 10 + std::rand() & 2;
-
-        // 트랙과 플레이어, CPU 위치 출력
-        track.TrackPrint(playX, playY, cpuX, cpuY);
-
-        UpdateRank();
         for (Character* character : RaceCharacterList) {
             character->UpdatePassiveSkills();
             std::cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n" << std::endl;
             std::cout << "스킬발동" << std::endl;
         }
 
+        RaceCharacterList[0]->UseSelectedSkill(playX);
         RaceCharacterList[0]->UseActiveSkills(playX);
         RaceCharacterList[1]->UseActiveSkills(cpuX);
+
+        // 플레이어 이동 처리
+        playX += RaceCharacterList[0]->RaceSpeed(playX, track) + rand() % 2;
+        cpuX += RaceCharacterList[1]->RaceSpeed(cpuX, track) + rand() % 2;
+       
+        PoseState();
+        // 트랙과 플레이어, CPU 위치 출력
+        track.TrackPrint(playX, playY, cpuX, cpuY, charPose);
+
+        RaceCharacterList[0]->SetPointX(playX);
+        RaceCharacterList[1]->SetPointX(cpuX);
+        UpdateRank();      
 
         // 경주 종료 조건: 플레이어나 CPU가 트랙 끝에 도착
         if (playX >= TRACK_WIDTH - 1)
@@ -56,7 +63,7 @@ void Race::RaceStart(int cash)
         }
 
         // 약간의 지연을 주어 게임 속도를 조절
-        Sleep(1);
+        Sleep(100);
     }
 }
 
@@ -81,19 +88,32 @@ void Race::RaceWin(int cash)
 
 void Race::UpdateRank()
 {
-    std::vector<std::pair<int, int>>positions;
-    for (int i = 0; i < 4; ++i) {
-        positions.push_back({ i,RaceCharacterList[i]->GetplayX() });
+    std::vector<int>rank;
+    rank.resize(2);
+    std::vector<int>pos;
+    pos.resize(2);
+
+    for (int i = 0; i < 2; ++i) {
+        rank[i] = 1;
+        pos[i] = RaceCharacterList[i]->GetpointX();
     }
 
-    std::sort(positions.begin(), positions.end(), [](const std::pair<int, int>& a, const std::pair<int, int>& b) {
-        return a.second > b.second;
-        });
-    
-    for (int i = 0; i < 4; ++i) {
-        int characterIndex = positions[i].first;
-        RaceCharacterList[characterIndex]->SetRank(i + 1);
+    for (int i = 0; i < 2; ++i) {
+        for (int j = 0; j < 2; ++j) {
+            if (pos[i] < pos[j]) {
+                rank[i]++;
+            }
+        }
     }
+    
+    for (int i = 0; i < 2; ++i) {        
+        RaceCharacterList[i]->SetRank(rank[i]);
+    }
+}
+
+void Race::PoseState()
+{
+    charPose = (charPose + 1) % 2;
 }
 
 int Race::GetplayX()

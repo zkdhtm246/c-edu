@@ -13,7 +13,6 @@
 #include"Lobby.h"
 #include"Skill.h"
 
-
 #define UP 72
 #define DOWN 80
 #define LEFT 75

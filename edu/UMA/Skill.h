@@ -12,6 +12,7 @@ public:
 	virtual bool CanActivate(int playX, int rank) = 0;
 	virtual void Activate(Character& character) = 0;
 	virtual void Update(Character& character) = 0;
+	std::string GetName() { return name; }
 };
 
 class ActiveSkill :public Skill {

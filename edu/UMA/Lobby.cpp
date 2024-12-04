@@ -12,18 +12,33 @@ void MeinMeun(Cash& batCash)
 		ClearScreen();
 		TitleDraw();
  		int menuCode = MenuDraw();
+		Track track;
 		
-		if (menuCode == 0) {
-			InitGame();
-			Track track;
-			//게임시작
+		if (menuCode == 0) {			
+			InitGame();			
+
+			//캐릭터 선택
 			int selectedCharacterIndex = CharacterChoice(characterList);
+			Character* selectedCharacter = characterList[selectedCharacterIndex];
+
+			//스킬 선택
+			int selectedSkillIndex = SkillChoice(*selectedCharacter);
+			Skill* selectedSkill = selectedCharacter->GetSkills()[selectedSkillIndex];
+			selectedCharacter->SetSelectedSkill(selectedSkill);
+
+			//배팅 선택
 			int selectedBattingCash = Batting(characterList, selectedCharacterIndex, batCash);
-			
+
+			//경기 시작
 			std::vector<Character*>raceCharacters;
 			raceCharacters.push_back(characterList[selectedCharacterIndex]);
 			raceCharacters.push_back(characterList[(selectedCharacterIndex + 1) % 3]);
+			raceCharacters.push_back(characterList[rand() % 6 + 3]);
+			raceCharacters.push_back(characterList[rand() % 6 + 3]);
+			raceCharacters.push_back(characterList[rand() % 6 + 3]);
+			raceCharacters.push_back(characterList[rand() % 6 + 3]);
 			
+			//track.UpdateCondition(time);
 			track.TrackBuild();
 			Race race(raceCharacters, track, &batCash);
 			race.RaceStart(selectedBattingCash);
@@ -188,4 +203,49 @@ int Batting(const std::vector<Character*>& characterList, int index, Cash& batCa
 		}
 	}
 
+}
+
+int SkillChoice(Character& selectedCharacter)
+{
+	ClearScreen();
+	int x = 3;
+	int y = 6;
+	std::cout << "\n\n";
+	std::cout << "                     [스 킬    선 택]\n\n";
+
+	const std::vector<Skill*>& skills = selectedCharacter.GetSkills();
+	for (int i = 0; i < skills.size(); ++i) {
+		gotoxy(x, y + i);
+		std::cout << "> " << skills[i]->GetName().c_str();
+	}
+
+	int skillIndex = 0;
+	while (1) {
+		int n = KeyControl();
+		switch (n) {
+		case UP: {
+			if (skillIndex <= 0) {
+				gotoxy(x, y);
+				std::cout << "  ";
+				gotoxy(x, y - 1);
+				std::cout << "> ";
+				skillIndex--;
+			}
+			break;
+		}
+		case DOWN: {
+			if (skillIndex < skills.size() - 1) {
+				gotoxy(x, y);
+				std::cout << "  ";
+				gotoxy(x, y + 1);
+				std::cout << "> ";
+				skillIndex++;
+			}
+			break;
+		}
+		case SPACE: {
+			return skillIndex;
+		}
+		}
+	}
 }

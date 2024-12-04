@@ -11,6 +11,7 @@ class Race
 private:
     int playX, playY;
     int cpuX, cpuY;
+    int charPose;
     std::vector<Character*>& RaceCharacterList;
     Track& track;
     Cash* batCash;
@@ -20,9 +21,11 @@ public:
 
     void RaceStart(int cash);
     void RaceWin(int cash);
-    //void RaceLose(int cash);
+    //void RaceLose(int cash);    
 
     void UpdateRank();
+
+    void PoseState();
 
     int GetplayX();
     int GetplayY();

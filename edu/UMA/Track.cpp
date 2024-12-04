@@ -2,7 +2,19 @@
 
 Track::Track()
 {
+    track = new char* [TRACK_HEIGHT];
+    for (int i = 0; i < TRACK_HEIGHT; ++i) {
+        track[i] = new char[TRACK_WIDTH];
+    }
     TrackBuild();
+}
+
+Track::~Track()
+{
+    for (int i = 0; i < TRACK_HEIGHT; ++i) {
+        delete[]track[i];
+    }
+    delete[]track;
 }
 
 void Track::TrackBuild()
@@ -16,15 +28,26 @@ void Track::TrackBuild()
                 }
             }
             else {
-                track[i][j] = ' ';
+                if (currentCondition == CLEAR) {
+                    track[i][j] = ' ';
+                }
+                else if (currentCondition == RAINY) {
+                    track[i][j] = '.';
+                }
+                else if (currentCondition == WINDY) {
+                    track[i][j] = '~';
+                }
+                else if (currentCondition == SNOWY) {
+                    track[i][j] = '*';
+                }
             }
         }
     }    
 }
 
-void Track::TrackPrint(int playX, int playY, int cpuX, int cpuY)
+void Track::TrackPrint(int playX, int playY, int cpuX, int cpuY, int charPose)
 {
-    ClearScreen();
+    
 
     int start_x = playX - PLAYER_FOCUS_WIDTH / 2;
     int end_x = playX + PLAYER_FOCUS_WIDTH / 2;
@@ -51,21 +74,57 @@ void Track::TrackPrint(int playX, int playY, int cpuX, int cpuY)
             if (i == playY && j == playX && i == cpuY && j == cpuX) {
                 ch = 'x';  // 플레이어와 CPU가 같은 위치에 있으면 'X' 출력
             }                
-            else if (i == playY && j == playX) {
-                ch = 'p';  // 플레이어 위치
-            }                
-            else if (i == cpuY && j == cpuX) {
-                ch = 'c';  // CPU 위치
+            else if (i == playY && j == playX) { //플레이어 위치
+                if (charPose == 0) {
+                    ch = 'p';
+                }
+                else {
+                    ch = 'q';
+                }
+            }            
+            else if (i == cpuY && j == cpuX) { //CPU 위치
+                if (charPose == 0) { 
+                    ch = 'u';
+                }
+                else {
+                    ch = 'n';
+                }
             }                
             else {
                 ch = track[i][j];  // 트랙 출력 (0, 1, 2 등)
             }               
 
             WriteConsoleOutputCharacter(console.hBuffer[console.nCurBuffer], &ch, 1, cursorPos, &dwWritten);
-
             cursorPos.X++;           
         }        
         cursorPos.Y++;
     }
     BufferFlip();    
+}
+
+void Track::UpdateCondition(int time)
+{
+    if (time % 50 == 0) {
+        int randomCondition = rand() % 4;
+        currentCondition = static_cast<TrackCondition>(randomCondition);
+
+        switch (currentCondition) {
+        case CLEAR:
+            std::cout << "\n\n\n\n\n\n\n\n\n";
+            std::cout << "날씨 : 맑음!" << std::endl;
+            break;
+        case RAINY:
+            std::cout << "\n\n\n\n\n\n\n\n\n";
+            std::cout << "날씨 : 비!" << std::endl;
+            break;
+        case WINDY:
+            std::cout << "\n\n\n\n\n\n\n\n\n";
+            std::cout << "날씨 : 강풍!" << std::endl;
+            break;
+        case SNOWY:
+            std::cout << "\n\n\n\n\n\n\n\n\n";
+            std::cout << "날씨 : 눈!" << std::endl;
+            break;
+        }
+    }
 }

@@ -2,6 +2,7 @@
 #include"Handle.h"
 
 class Skill;
+class Track;
 
 class Character
 {
@@ -10,37 +11,46 @@ private:
 	int speed;
 	int power;	
 	int intel;
+	int raceType;
 	int rank;
+	int pointX;
 
 	std::vector<Skill*>activeSkills;
 	std::vector<Skill*>passiveSkills;
+	Skill* selectedSkill;
 
 public:
-	Character(std::string n, int s, int p, int i);
+	Character(std::string n, int s, int p, int i, int t);
 
 	
 	void PrintLobbyInfo()const;
 		
 	void AddActiveSkill(Skill* skill);
 	void AddPassiveSkill(Skill* skill);
+	void SetSelectedSkill(Skill* skill);
 	
 	void UseActiveSkills(int playX);
+	void UseSelectedSkill(int playX);
 	void UpdatePassiveSkills();
 
-	void SetRank(int newRank) { rank = newRank; }	
+	int RaceSpeed(int player, const Track& track);
 
 	void UpSpeed(int value) { speed += value; }
 	void UpPower(int value) { power += value; }
 	void UpIntel(int value) { intel += value; }
+	void DownSpeed(int value);
 
+	std::string GetName()const { return name; }
 	int GetStatusSpeed()const { return speed; }
 	int GetStatusPower()const { return power; }
-	int GetStatusIntel()const { return intel; }
-	std::string GetName()const { return name; }
+	int GetStatusIntel()const { return intel; }	
 	int GetRank()const { return rank; }
-	int GetplayX()const { return speed / 10; }
+	int GetpointX()const { return pointX; }
+	const std::vector<Skill*>& GetSkills()const { return activeSkills; }
+	void SetRank(int newRank) { rank = newRank; }
+	void SetPointX(int newPointX) { pointX = newPointX; }
 
-	void DownSpeed(int value);
+	
 };
 
 void CreateCharacterList(std::vector<Character*>& characterList);
@@ -69,7 +79,7 @@ public:
 //  0,3,6,6,6,0,0,0,
 //  0,0,6,0,0,0,0,0, };
 //#pragma endregion
-
+//
 //std::cout << std::endl << std::endl << std::endl;
 //for (int i = 0; i < 8; i++)
 //{
