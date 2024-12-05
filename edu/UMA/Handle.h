@@ -4,8 +4,12 @@
 #include<conio.h>
 #include<vector>
 #include<cstdlib>
+#include<stdlib.h>
 #include<ctime>
 #include<algorithm>
+#include<time.h>
+#include<random>
+#include<chrono>
 #include"DoubleBuffring.h"
 #include"Race.h"
 #include"Track.h"
@@ -18,6 +22,7 @@
 #define LEFT 75
 #define RIGHT 77
 #define SPACE 0
+#define ESC 27
 
 void gotoxy(int x, int y);
 int KeyControl();

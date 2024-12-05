@@ -17,7 +17,7 @@ void InitGame(bool bInitConsole)
 		consoleCursor.bVisible = 0;
 		GetConsoleScreenBufferInfo(console.hConsole, &consoleInfo);
 		consoleInfo.dwSize.X = TRACK_WIDTH;		//콘솔의 Width
-		consoleInfo.dwSize.Y = TRACK_HEIGHT;	//콘솔의 Height
+		consoleInfo.dwSize.Y = TRACK_HEIGHT / 2;	//콘솔의 Height
 
 		SetConsoleScreenBufferSize(console.hConsole, consoleInfo.dwSize);
 		SetConsoleCursorInfo(console.hConsole, &consoleCursor);

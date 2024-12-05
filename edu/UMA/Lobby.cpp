@@ -3,48 +3,52 @@
 
 void gotoxy(int x, int y);
 
-void MeinMeun(Cash& batCash)
-{		
-	std::vector<Character*>characterList;
-	CreateCharacterList(characterList);
-
+void MeinMeun(Cash& batCash) {	
 	while (1) {
 		ClearScreen();
+		InitGame();
 		TitleDraw();
  		int menuCode = MenuDraw();
-		Track track;
-		
+		Track track;		
+
+		std::vector<Character*>characterList;
+		CreateCharacterList(characterList);		
+
 		if (menuCode == 0) {			
-			InitGame();			
+			
 
 			//캐릭터 선택
 			int selectedCharacterIndex = CharacterChoice(characterList);
 			Character* selectedCharacter = characterList[selectedCharacterIndex];
 
 			//스킬 선택
-			int selectedSkillIndex = SkillChoice(*selectedCharacter);
+			SkillReDraw(*selectedCharacter, batCash);
+			/*int selectedSkillIndex = SkillChoice(*selectedCharacter, batCash);
 			Skill* selectedSkill = selectedCharacter->GetSkills()[selectedSkillIndex];
-			selectedCharacter->SetSelectedSkill(selectedSkill);
+			selectedCharacter->SetSelectedSkill(selectedSkill);*/
 
 			//배팅 선택
 			int selectedBattingCash = Batting(characterList, selectedCharacterIndex, batCash);
 
 			//경기 시작
-			std::vector<Character*>raceCharacters;
-			raceCharacters.push_back(characterList[selectedCharacterIndex]);
-			raceCharacters.push_back(characterList[(selectedCharacterIndex + 1) % 3]);
-			raceCharacters.push_back(characterList[rand() % 6 + 3]);
-			raceCharacters.push_back(characterList[rand() % 6 + 3]);
-			raceCharacters.push_back(characterList[rand() % 6 + 3]);
-			raceCharacters.push_back(characterList[rand() % 6 + 3]);
-			
-			//track.UpdateCondition(time);
-			track.TrackBuild();
-			Race race(raceCharacters, track, &batCash);
+			std::vector<Character*>raceCharactersList;			
+			raceCharactersList.push_back(characterList[3]);
+			raceCharactersList.push_back(characterList[4]);
+			raceCharactersList.push_back(characterList[selectedCharacterIndex]);
+			raceCharactersList.push_back(characterList[(selectedCharacterIndex + 1) % 3]);
+			raceCharactersList.push_back(characterList[5]);
+			raceCharactersList.push_back(characterList[6]);
+
+			Race race(raceCharactersList, track, &batCash);
+						
+			track.TrackBuild();			
 			race.RaceStart(selectedBattingCash);
 
 			std::cout << "\n경기가 종료되었습니다. 메인 메뉴로 돌아갑니다.\n";
-			Sleep(2000);			
+			
+			Sleep(2000);		
+			DeleteCharacterList(characterList);
+			continue;
 		}
 		else if (menuCode == 1)	{
 			//게임설정
@@ -77,7 +81,7 @@ int MenuDraw()
 	gotoxy(x - 2, y);
 	printf("> 게 임 시 작");
 	gotoxy(x, y + 1);
-	printf("게 임 설 정");
+	printf("게 임 설 정(미구현)");
 	gotoxy(x, y + 2);
 	printf("   종 료   ");
 	
@@ -205,47 +209,106 @@ int Batting(const std::vector<Character*>& characterList, int index, Cash& batCa
 
 }
 
-int SkillChoice(Character& selectedCharacter)
+int SkillChoice(Character& selectedCharacter, Cash& batCash)
 {
 	ClearScreen();
 	int x = 3;
 	int y = 6;
 	std::cout << "\n\n";
-	std::cout << "                     [스 킬    선 택]\n\n";
+	std::cout << "                     [스 킬    선 택]\n";
+	std::cout << "소지금 : " << batCash.GetCash() << std::endl;
 
-	const std::vector<Skill*>& skills = selectedCharacter.GetSkills();
-	for (int i = 0; i < skills.size(); ++i) {
+	PublicSkill publicSkill;
+	std::vector<Skill*>& allSkills = publicSkill.GetSkillList();
+
+	std::vector<Skill*>validSkills;
+	for (Skill* skill : allSkills) {
+		if (!selectedCharacter.ReSkillSelected(skill)) {
+			validSkills.push_back(skill);
+		}
+	}
+	unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
+	std::shuffle(validSkills.begin(), validSkills.end(), std::default_random_engine(seed));
+
+	std::vector<Skill*>randomSkills(validSkills.begin(), validSkills.begin() + 3);
+
+	for (int i = 0; i < randomSkills.size(); ++i) {
 		gotoxy(x, y + i);
-		std::cout << "> " << skills[i]->GetName().c_str();
+		if (i == 0) {
+			std::cout << "> " << randomSkills[i]->GetName();
+		}
+		else {
+			std::cout << "  " << randomSkills[i]->GetName();
+		}		
 	}
 
 	int skillIndex = 0;
 	while (1) {
+		
 		int n = KeyControl();
 		switch (n) {
 		case UP: {
-			if (skillIndex <= 0) {
-				gotoxy(x, y);
+			if (skillIndex > 0) {
+				gotoxy(x, y + skillIndex);
 				std::cout << "  ";
-				gotoxy(x, y - 1);
+				gotoxy(x, y + skillIndex - 1);
 				std::cout << "> ";
 				skillIndex--;
 			}
 			break;
 		}
 		case DOWN: {
-			if (skillIndex < skills.size() - 1) {
-				gotoxy(x, y);
+			if (skillIndex < randomSkills.size() - 1) {
+				gotoxy(x, y + skillIndex);
 				std::cout << "  ";
-				gotoxy(x, y + 1);
+				gotoxy(x, y + skillIndex + 1);
 				std::cout << "> ";
 				skillIndex++;
 			}
 			break;
 		}
 		case SPACE: {
-			return skillIndex;
+			selectedCharacter.AddSkill(randomSkills[skillIndex]);
+			selectedCharacter.AddSelectedSkill(randomSkills[skillIndex]);
+
+			std::cout <<"\n\n\n"<< randomSkills[skillIndex]->GetName() << " 스킬을 선택했습니다." << std::endl;
+			Sleep(500);
+
+			if (batCash.GetCash() >= 2000) {
+				std::cout << "\n\n\n추가 스킬 선택을 위해 2000원을 사용하시겠습니까?\n";
+
+				int c = KeyControl();
+				switch (c) {
+				case SPACE: {
+					batCash.SetBattingCash(2000);
+					return 1;
+				}
+				case ESC: {
+					return 0;
+				}
+				}
+			}
+			else {
+				std::cout << "\n\n\n소지금이 부족하여 스킬 선택을 종료하겠습니다." << std::endl;
+				Sleep(500);
+				return 0;
+			}
 		}
+		case ESC: {
+			return 0;
+		}
+		}
+	}
+}
+
+void SkillReDraw(Character& character, Cash& batCash)
+{
+	bool continueChoice = true;
+
+	while (continueChoice) {
+		int reChoice = SkillChoice(character, batCash);
+		if (reChoice == 0) {
+			continueChoice = false;
 		}
 	}
 }

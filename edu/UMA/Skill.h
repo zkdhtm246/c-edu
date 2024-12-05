@@ -3,35 +3,38 @@
 
 class Skill {
 protected:
-	std::string name;	
-	bool isActive;
-public:
-	Skill(std::string skillName);
-	virtual ~Skill(){}
-
-	virtual bool CanActivate(int playX, int rank) = 0;
-	virtual void Activate(Character& character) = 0;
-	virtual void Update(Character& character) = 0;
-	std::string GetName() { return name; }
-};
-
-class ActiveSkill :public Skill {
-private:
+	std::string name;
+	int value;
+	int valueType;
+	int type;
 	int skillPos;
 	int skillRank;
+	bool used;
 public:
-	ActiveSkill(std::string skillName, int pos, int rank);
-	bool CanActivate(int playX, int rank)override;
-	void Activate(Character& character)override;
-	void Update(Character& character)override;
+	Skill(std::string skillName, int value, int vType, int type, int pos, int rank);
+
+	std::string GetName() { return name; }
+	int GetValue() { return value; }
+
+	bool CanActivate(int playX, int rank, int intel);
+
+	void SkillValueUp(Character& character);
 };
 
-class PassiveSkill :public Skill {
+class UniqSkill {
 private:
-	int statusUp;
+	std::vector<Skill*>uniqSkillList;
 public:
-	PassiveSkill(std::string skillName, int up);
-	bool CanActivate(int playX, int rank)override { return true; }
-	void Activate(Character& character)override { isActive = true; }
-	void Update(Character& character)override;
+	UniqSkill();
+
+	std::vector<Skill*>& GetUniqSkillList() { return uniqSkillList; }
+};
+
+class PublicSkill {
+private:
+	std::vector<Skill*>publicSkillList;
+public:
+	PublicSkill();
+
+	std::vector<Skill*>& GetSkillList() { return publicSkillList; }
 };

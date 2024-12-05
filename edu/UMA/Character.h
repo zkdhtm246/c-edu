@@ -14,43 +14,45 @@ private:
 	int raceType;
 	int rank;
 	int pointX;
+	char dot1;
+	char dot2;
 
-	std::vector<Skill*>activeSkills;
-	std::vector<Skill*>passiveSkills;
+	std::vector<Skill*>skillList;
+	std::vector<Skill*>selectedSkills;
 	Skill* selectedSkill;
 
 public:
 	Character(std::string n, int s, int p, int i, int t);
-
 	
 	void PrintLobbyInfo()const;
-		
-	void AddActiveSkill(Skill* skill);
-	void AddPassiveSkill(Skill* skill);
-	void SetSelectedSkill(Skill* skill);
-	
-	void UseActiveSkills(int playX);
-	void UseSelectedSkill(int playX);
-	void UpdatePassiveSkills();
 
-	int RaceSpeed(int player, const Track& track);
+	void AddSkill(Skill* skill);
+	void AddSelectedSkill(Skill* skill) { selectedSkills.push_back(skill); }
+	void SetSelectedSkill(Skill* skill);
+	bool ReSkillSelected(Skill* skill);
+
+	void UseSkillCheck(int skillIndex);
+
+	int RaceSpeed(const Track& track);
 
 	void UpSpeed(int value) { speed += value; }
 	void UpPower(int value) { power += value; }
-	void UpIntel(int value) { intel += value; }
-	void DownSpeed(int value);
+	void UpIntel(int value) { intel += value; }	
 
 	std::string GetName()const { return name; }
 	int GetStatusSpeed()const { return speed; }
 	int GetStatusPower()const { return power; }
-	int GetStatusIntel()const { return intel; }	
+	int GetStatusIntel()const { return intel; }
+	std::string GetStatusType()const;
 	int GetRank()const { return rank; }
 	int GetpointX()const { return pointX; }
-	const std::vector<Skill*>& GetSkills()const { return activeSkills; }
 	void SetRank(int newRank) { rank = newRank; }
 	void SetPointX(int newPointX) { pointX = newPointX; }
+	const std::vector<Skill*>& GetSkills()const { return skillList; }
+	const std::vector<Skill*>& GetSelectedSkills()const { return selectedSkills; }
 
-	
+	char GetDot(int charPose)const;
+	void SetDot(const char costomDot1, const char costomDot2);	
 };
 
 void CreateCharacterList(std::vector<Character*>& characterList);
